@@ -25,13 +25,24 @@ function App()  {
 
             );
         }
+        if(Questions.length==0)
+            return (
+                <div>Load data</div>
+            );
+        let q=Questions[0];
+
         return (
             <div id="container">
                 <div id="logo"></div>
                 <div id="filters"><div id="btn_filters"></div></div>
                 <div id="container_quizz">
-                    <div id="first_quizz"></div>
-                    {Questions.map(p =>
+                    <div id="first_quizz">
+                        <a className="lien_quizz" href={'quizz/'+ q.id}>
+                        <img className="image_quizz" src={HTTP_SERVER_PORT_PICTURES + q.icon} alt="icon"/>
+                        <span className="titre_quizz">{q.name}</span>
+                        </a>
+                    </div>
+                    {Questions.filter( (q,i) => i !== 0).map(p =>
                         <QuizzThumbnail
 
                             name = {p.name}
@@ -146,6 +157,7 @@ function App()  {
             <Route path="*" component={() => <p>Page Not Found</p>} />
 
           </Switch>
+
 
             <div className="MenuNavigation">
                 <div className="btn_menu_div">
