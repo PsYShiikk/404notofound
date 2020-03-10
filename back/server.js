@@ -10,6 +10,8 @@ const port = process.env.PORT || 8000;
 
 app.use(morgan('combined'));
 app.use(cors());
+
+app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true

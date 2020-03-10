@@ -31,6 +31,18 @@ CREATE TABLE answers (
 INSERT INTO quizzes (name,picture_url,keywords)
 VALUES
    ("quizz1", "Aix/aix.jpg", "brian;people"),
+   ("quizz2", "Aix/aix.jpg", "toto;people"),
+   ("quizz1", "Aix/aix.jpg", "brian;people"),
+   ("quizz2", "Aix/aix.jpg", "toto;people"),
+   ("quizz1", "Aix/aix.jpg", "brian;people"),
+   ("quizz2", "Aix/aix.jpg", "toto;people"),
+   ("quizz1", "Aix/aix.jpg", "brian;people"),
+   ("quizz2", "Aix/aix.jpg", "toto;people"),
+   ("quizz1", "Aix/aix.jpg", "brian;people"),
+   ("quizz2", "Aix/aix.jpg", "toto;people"),
+   ("quizz1", "Aix/aix.jpg", "brian;people"),
+   ("quizz2", "Aix/aix.jpg", "toto;people"),
+   ("quizz1", "Aix/aix.jpg", "brian;people"),
    ("quizz2", "Aix/aix.jpg", "toto;people");
 
 INSERT INTO questions (sentence, score, quizzes_id)

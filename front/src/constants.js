@@ -1,5 +1,5 @@
 const SERVER = "localhost";
-const PORT = 3000;
+const PORT = 8000;
 const HTTP_SERVER_PORT = 'http://' + SERVER + ':' + PORT + "/";
 const PICTURES = "pictures";
 const HTTP_SERVER_PORT_PICTURES = HTTP_SERVER_PORT + PICTURES + "/";
