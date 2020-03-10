@@ -16,34 +16,29 @@ function App()  {
         function QuizzThumbnail(props) {
 
             return (
-
-                <a href={'quizz/'+ props.id} ><div className="quizz">
-
-                    <img src={HTTP_SERVER_PORT_PICTURES + props.icon} alt="icon"/>
-
-
-
-                    <span>{props.name}</span>
-
-
-                </div>
+                <div className="quizz_card">
+                    <a className="lien_quizz" href={'quizz/'+ props.id}>
+                        <img className="image_quizz" src={HTTP_SERVER_PORT_PICTURES + props.icon} alt="icon"/>
+                        <span className="titre_quizz">{props.name}</span>
                     </a>
+                </div>
 
             );
         }
         return (
-            <div>
-
-                <p>{Questions.map(p =>
-
+            <div id="container">
+                <div id="logo"></div>
+                <div id="filters"><div id="btn_filters"></div></div>
+                <div id="container_quizz">
+                    <div id="first_quizz"></div>
+                    {Questions.map(p =>
                         <QuizzThumbnail
 
                             name = {p.name}
                             icon = {p.icon}
                             id = {p.id}
-
-                        />)}
-                </p>
+                    />)}
+                </div>
             </div>
 
         );
@@ -139,7 +134,7 @@ function App()  {
 
   return (
       <BrowserRouter>
-        <div>
+
           <Switch>
             <Route exact={true} path="/" component={Home} />
             <Route exact={true} path="/about" component={About} />
@@ -154,12 +149,12 @@ function App()  {
 
             <div className="MenuNavigation">
                 <div className="btn_menu_div">
-                    <a href="/score" className="btn_menu"><img src="./img/icon/scores.svg" alt="btn score"/></a>
-                    <a href="/" className="btn_menu active"><img src="./img/icon/home.svg" alt="btn accueil"/></a>
-                    <a href="/user" className="btn_menu"><img src="./img/icon/user.svg" alt="btn compte"/></a>
+                    <a href="/score" className="btn_menu"><div id="btn_score"></div></a>
+                    <a href="/" className="btn_menu active"><div id="btn_home"></div></a>
+                    <a href="/user" className="btn_menu"><div id="btn_profil"></div></a>
                 </div>
             </div>
-        </div>
+
       </BrowserRouter>
   );
 }
