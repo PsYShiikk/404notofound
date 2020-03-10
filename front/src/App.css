@@ -118,7 +118,10 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+<<<<<<< HEAD
 
+=======
+>>>>>>> c08e8b838664f8035ccd1e7e888b26375e8ec92c
 }
 
 
@@ -156,13 +159,14 @@ body {
 }
 
 .lien_quizz{
-  height: 100%;
-  background-color: #6100FF;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
+   height: 100%;
+   background-color: #6100FF;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+ }
+
 .image_quizz{
   height: 100%;
   width: 100%;

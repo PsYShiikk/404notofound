@@ -12,6 +12,7 @@ import Login from "./Login";
 function App()  {
 
 
+
   return (
       <BrowserRouter>
 
@@ -26,6 +27,7 @@ function App()  {
             <Route path="*" component={() => <p>Page Not Found</p>} />
 
           </Switch>
+
 
             <div className="MenuNavigation">
                 <div className="btn_menu_div">
