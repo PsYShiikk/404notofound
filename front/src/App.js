@@ -4,8 +4,12 @@ import {BrowserRouter, Switch, Route} from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
 import Quizz from "./QuizzUnique";
-import Login from "./Login";
-
+import Login, {ProtectedRoute} from "./Login";
+import Register from "./Register";
+import Score from "./Score";
+import userProfile from "./userProfile";
+import User from "./user";
+import Add from "./add";
 
 
 
@@ -21,6 +25,11 @@ function App()  {
             <Route exact={true} path="/about" component={About} />
             <Route exact={true} path="/quizz/:id" component={Quizz} />
             <Route exact={true} path="/login" component={Login} />
+            <Route exact={true} path="/register" component={Register} />
+            <Route exact={true} path="/score" component={Score} />
+            <Route exact={true} path="/user" component={User} />
+            <Route exact={true} path="/add" component={Add} />
+            <ProtectedRoute exact={true} path="/userprofile" component={userProfile} />
 
 
 

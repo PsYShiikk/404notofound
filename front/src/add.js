@@ -2,7 +2,7 @@ import React from "react";
 import {useCookies, withCookies} from 'react-cookie';
 
 
-function User() {
+function Add() {
         const [cookies, removeCookie] = useCookies(['login']);
         const msg = cookies.login && cookies.login.username ? "connection OK" : "no connection";
 
@@ -16,23 +16,7 @@ function User() {
 
             <div id="container">
                 <div id="logo"></div>
-                <form id="profil">
-                    <span id="titre_profil">MY PROFIL</span>
-                    <div className="component_profil">
-                        <span className="tittle_component">Username</span>
-                        <input className="champ_profil" type="text" />
-                    </div>
-                    <div className="component_profil">
-                        <span className="tittle_component">Password</span>
-                        <input className="champ_profil" type="password"/>
-                    </div>
-                    <div className="component_profil"><input type="submit" value="CHANGE" className="btn_change" id="change"/></div>
-                </form>
-                <div id="profil " id="myquizz">
-                    <span id="titre_profil">MY QUIZZ</span>
-                    <div id="addquiz"><a id="btnquizz" href="addquizz"></a></div>
 
-                </div>
 
             </div>
         );
@@ -51,4 +35,4 @@ function User() {
     }
 }
 
-export default User;
+export default Add;

@@ -1,6 +1,7 @@
 body {
 }
 *{margin: 0;
+  font-family: Poppins;
 }
 #container{
   width: 80%;
@@ -118,10 +119,6 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-<<<<<<< HEAD
-
-=======
->>>>>>> c08e8b838664f8035ccd1e7e888b26375e8ec92c
 }
 
 
@@ -186,20 +183,65 @@ body {
 /****       FIN QUIZZ       ****/
 
 
+/****       Login       ****/
 
 
-.login_page{
-  background: #6100FF;
-  height: 90vh;
-  width: 100%;
+#logo_notlogged {
+  background: url('./img/logos/logo.svg');
+  width: 192px;
+  height: 120px;
+  margin: 20vh auto;
+}
+
+#buttons_list div {
+  margin: 30px auto;
+  border-radius: 50px;
 }
 
 
+#buttons_list div a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -5px;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #FF00F1 0%, #6100FF 100%);
+  outline: none;
+}
+
+#buttons_list div a {
+  display: block;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  background-color: #fff;
+  position: relative;
+  padding: 10px;
+  width: 50vw;
+  margin: 0 auto;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* END LOGIN/REGISTER HOME */
+
+/* LOGIN PAGE */
+
+#login {
+  margin: 15vh 0;
+}
+
 .txtb{
-  width: 100%;
+  width: 70vw;
   border-bottom: 2px solid #adadad;
   position: relative;
-  margin: 30px 0;
+  margin: 30px auto;
 }
 
 .txtb  input{
@@ -253,12 +295,175 @@ body {
   position: absolute;
   width: 0%;
   height: 2px;
-  background: #FFD833;
+  background: linear-gradient(90deg, #FF00F1 0%, #6100FF 100%);
   left: 0;
   bottom: -1.5px;
   transition: .5s;
+}
 
+.focus + span::before{
+  top: -5px;
+}
+.focus + span::after{
+  width: 100%;
 }
 
 
 
+
+.btn_submit {
+  display: block;
+  text-align: center;
+  border: 0;
+  background: linear-gradient(90deg, #FF00F1 0%, #6100FF 100%);
+  border-radius: 50px;
+  color: #fff;
+  position: relative;
+  padding: 15px 5px;
+  width: 40vw;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  outline: none;
+}
+
+/****       FIN LOGIN       ****/
+
+
+/* SCORE */
+
+#score_list {
+  height: 50vh;
+  overflow-y: auto;
+}
+
+#score_list .score_item {
+  display: flex;
+  border-left: 3px solid #6100FF;
+  justify-content: space-between;
+  padding: 10px 20px;
+  margin: 15px 30px;
+}
+
+.score_item .score_item_points,
+.score_item .score_item_num {
+  color: #999;
+}
+
+.score_item .score_item_points span {
+  background: -webkit-linear-gradient(90deg, #FF00F1 0%, #6100FF 100%);
+  background: linear-gradient(90deg, #FF00F1 0%, #6100FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#score_local {
+  display: flex;
+  justify-content: space-between;
+  background: -webkit-linear-gradient(90deg, #FF00F1 0%, #6100FF 100%);
+  background: linear-gradient(90deg, #FF00F1 0%, #6100FF 100%);
+  padding: 10px 20px;
+  margin: 20px 30px 5px;
+  color: #fff;
+
+}
+
+/* END SCORE */
+
+
+
+/****       Profil        ****/
+#profil{
+  min-height: 25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#titre_profil{
+  margin-top: 2vh;
+  font-weight: bold;
+  position: relative;
+}
+
+#titre_profil:after{
+  top: +80%;
+  left: 0;
+  position: absolute;
+  content: "  ";
+  height: 0.4vh;
+  width: 100%;
+  background: linear-gradient(90deg, #FF00F1 0%, #6100FF 100%);
+}
+
+.component_profil{
+  margin-top: 2vh;
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.btn_change{
+  text-align: center;
+  border: 0;
+  background: linear-gradient(90deg, #FF00F1 0%, #6100FF 100%);
+  border-radius: 50px;
+  color: #fff;
+  position: relative;
+  padding: 7px 2px;
+  width: 40vw;
+  margin-top: 2vh;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  outline: none;
+}
+
+#myquizz{
+  margin-top: 8vh;
+  position: relative;
+}
+
+#disconnect{
+  width: 60%;
+  height:60%;
+  background: url("./img/icon/logout.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.champ_profil{
+  border: none;
+  outline: none;
+  padding: 1vh;
+  background-color: white;
+}
+
+#addquiz{
+  position: absolute;
+  top: -50%;
+  right: 0;
+  width: 7vh;
+  height: 7vh;
+  background: #FFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+#btnquizz{
+  width: 60%;
+  height:60%;
+  background: url("./img/icon/add.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+/****       FIN PROFIL        ****/
