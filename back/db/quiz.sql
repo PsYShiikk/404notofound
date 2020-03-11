@@ -4,6 +4,13 @@ DROP TABLE IF EXISTS answers;
 
 PRAGMA foreign_keys = ON;
 
+CREATE TABLE user (
+   id INTEGER NOT NULL PRIMARY KEY,
+   username TEXT,
+   avatar TEXT,
+   score INTEGER,
+   password TEXT
+);
 
 CREATE TABLE quizzes (
    id INTEGER NOT NULL PRIMARY KEY,
@@ -32,18 +39,6 @@ INSERT INTO quizzes (name,picture_url,keywords)
 VALUES
    ("quizz1", "Aix/aix.jpg", "brian;people"),
    ("quizz2", "Aix/aix.jpg", "toto;people"),
-   ("quizz1", "Aix/aix.jpg", "brian;people"),
-   ("quizz2", "Aix/aix.jpg", "toto;people"),
-   ("quizz1", "Aix/aix.jpg", "brian;people"),
-   ("quizz2", "Aix/aix.jpg", "toto;people"),
-   ("quizz1", "Aix/aix.jpg", "brian;people"),
-   ("quizz2", "Aix/aix.jpg", "toto;people"),
-   ("quizz1", "Aix/aix.jpg", "brian;people"),
-   ("quizz2", "Aix/aix.jpg", "toto;people"),
-   ("quizz1", "Aix/aix.jpg", "brian;people"),
-   ("quizz2", "Aix/aix.jpg", "toto;people"),
-   ("quizz1", "Aix/aix.jpg", "brian;people"),
-   ("quizz2", "Aix/aix.jpg", "toto;people");
 
 INSERT INTO questions (sentence, score, quizzes_id)
 VALUES
@@ -59,14 +54,18 @@ VALUES
    ("in the kitchen", NULL, 1, 1),
    ("in the garden", NULL, 1, 1),
    ("in the bathroom", NULL, 0, 1),
+
    (NULL, "Aix/euroNight1.jpg", 0, 2),
    (NULL, "Aix/festival1.jpg", 1, 2),
    (NULL, "Aix/granet1.jpg", 1, 2),
+
    ("a boy", NULL, 1, 3),
    ("a girl", NULL, 0, 3),
+
    ("in the living room", NULL, 0, 4),
    ("in the kitchen", NULL, 1, 4),
    ("in the garden", NULL, 0, 4),
    ("in the bathroom", NULL, 0, 4),
+
    ("a boy", NULL, 1, 5),
    ("a girl", NULL, 0, 5);
