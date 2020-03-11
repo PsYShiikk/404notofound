@@ -1,10 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import './App.css';
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
 import Quizz from "./QuizzUnique";
 import Login from "./Login";
+import QuizzQuestion from "./QuizzAffichageQuestion";
 
 
 
@@ -20,6 +21,7 @@ function App()  {
             <Route exact={true} path="/" component={Home} />
             <Route exact={true} path="/about" component={About} />
             <Route exact={true} path="/quizz/:id" component={Quizz} />
+            <Route exact={true} path="/quizz/play/:id" component={QuizzQuestion} />
             <Route exact={true} path="/login" component={Login} />
 
 

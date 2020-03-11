@@ -121,7 +121,7 @@ body {
 <<<<<<< HEAD
 
 =======
->>>>>>> c08e8b838664f8035ccd1e7e888b26375e8ec92c
+
 }
 
 
@@ -259,6 +259,138 @@ body {
   transition: .5s;
 
 }
+
+
+/*** AFFICHAGE LANCEMENT QUIZZ ****/
+.pageDeLancement{
+  width:100%;
+  height: calc(100vh - 210px);
+}
+
+.pageDeLancement > div{
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.headerPageDeLancement{
+  width: 90%;
+  height: 50vh;
+  border-radius: 30px;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.imagePageDeLancement{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.headerPageDeLancement > h2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+}
+
+.btnLancementQuizz{
+  padding: 20px 40px;
+  background: linear-gradient(90deg, #FF00F1 0%, #6100FF 100%);
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.overlayLancementQuizz{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(to bottom, #FF00F1 0%, #6100FF 100%);
+  opacity: 0.3;
+}
+
+/**** Affichage des questions et des réponses au quizzz ***/
+
+.AffichageQuestion{
+  width: 90%;
+  margin: 0 auto;
+
+
+}
+
+.LaQuestion{
+  width: 100%;
+  height: 20vh;
+  background: #efefef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.LesReponses{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  margin-top: 10px;
+
+}
+
+.LesReponses > div{
+  width: 100%;
+  padding-top: 100%;
+  background: #efefef;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+.LesReponses > div > span{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   width: 100%;
+   text-align: center;
+  z-index: 20;
+ }
+
+.LesReponses > div > img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+.overlayRep.checked{
+  background: #FF00F1!important;
+  opacity: 0.5;
+  color: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
 
 
 

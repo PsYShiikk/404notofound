@@ -22,12 +22,34 @@ router
     .get('/quizz/:id', (req, res) => {
 
         db.all(
-            "select * from questions where quizzes_id = ?", [req.params.id],
+            "select * from quizzes where id = ?", [req.params.id],
             (err, row) => {
                 res.json(row)
             }
         );
     })
+
+    .get('/quizz/jouer/:id', (req, res) => {
+
+        db.all(
+            "select * from questions where quizzes_id = ? ", [req.params.id],
+            (err, row) => {
+                res.json(row)
+            }
+        );
+    })
+
+    .get('/quizz/reponse/:id', (req, res) => {
+
+        db.all(
+            "select * from answers where questions_id = ? ", [req.params.id],
+            (err, row) => {
+                res.json(row)
+            }
+        );
+    })
+
+
 
 
 
