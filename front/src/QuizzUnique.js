@@ -8,19 +8,16 @@ import AffichageDebutQuizz from "./AffichageDebutQuizz";
 ////PAGE DE LANCEMENT DU QUIZZ
 function Quizz(props) {
 
+    const [quizz, setQuizz] = useState([]);
+
+    async function getQuizz(){
     let id = props.match.params.id;
-
-
-
-
-
-
-        const data = (await axios.get('http://localhost:8000/quizz/' + id )).data;
-
+    const data = (await axios.get('http://localhost:8000/quizz/' + id )).data;
+    setQuizz(data);
 
     }
     useEffect(() => {
-
+        getQuizz();
     }, []);
 
 
